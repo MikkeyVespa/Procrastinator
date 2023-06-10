@@ -4,7 +4,13 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Procrastinator – Не пиши код как Про!
+    title Procrastinator – Don"t write your code like a pro!
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin="")
+    link(href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap" rel="stylesheet")
+    link(rel="preconnect" href="https://fonts.googleapis.com")
+    link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin="")
+    link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet")
   body 
     header 
       nav 
@@ -19,9 +25,9 @@ html(lang="en")
       section.hero-section 
         .container 
           .hero-section__content
-            h1.hero-section__title Explore the future of the
+            h1.hero-section__title.title Explore the future of the
               span Procrastination
-            p.hero-section__text Let's explore and create your own procrastiantion style.
+            p.hero-section__text Let"s explore and create your own procrastiantion style.
             button(type="button")
             ul.hero-section__features
               li 9 way to spend time
@@ -33,12 +39,12 @@ html(lang="en")
         .container 
           .info__images 
           .info__content 
-            h2 
+            h2.subtitle 
             p 
             button(type="button") 
       section.features 
         .container 
-          h2 Breathtaking features of Procrastinator
+          h2.subtitle Breathtaking features of Procrastinator
           p 
           ul.features__list 
             li.features__item 
@@ -49,9 +55,13 @@ html(lang="en")
                 button(type="button") Try now
       section(id="procrastinator")
         .container 
-          h2 Choose your 
+          h2.subtitle Choose your 
             span Destiny
           p Adipiscing at in tellus integer. Pellentesque massa placerat duis ultricies. Venenatis cras
           .procratinator__list
             .procratinator__item
+              .wrapper
+                <img class="procratinator__image" src="https://code.s3.yandex.net/web-code/procrastinate/9.png">
+                p Не писать код, а
+                  span.phrase что бы поделать?
           button(type="button") Try another one
