@@ -1,5 +1,5 @@
 doctype html
-html(lang="en")
+html(lang="en").page
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
@@ -11,10 +11,11 @@ html(lang="en")
     link(rel="preconnect" href="https://fonts.googleapis.com")
     link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin="")
     link(href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet")
-  body 
-    header 
-      nav 
-        a(href="#")
+    link(rel="stylesheet" href="styles.css")
+  body.page__body
+    header.page-header
+      nav.page-header__nav.container
+        a(href="#") Procrastinator
         button(type="button") Toggle Menu
         ul
           li
@@ -25,7 +26,7 @@ html(lang="en")
       section.hero-section 
         .container 
           .hero-section__content
-            h1.hero-section__title.title Explore the future of the
+            h1.hero-section__title.title Explore the future of 
               span Procrastination
             p.hero-section__text Let"s explore and create your own procrastiantion style.
             button(type="button")
@@ -64,4 +65,4 @@ html(lang="en")
                 <img class="procratinator__image" src="https://code.s3.yandex.net/web-code/procrastinate/9.png">
                 p Не писать код, а
                   span.phrase что бы поделать?
-          button(type="button") Try another one
+          button(type="button") Next idea

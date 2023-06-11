@@ -1,0 +1,20 @@
+.page__body {
+  background-color: #010208;
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.container {
+  padding-inline: 120px;
+  width: 95%;
+}
+
+.page-header__nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*# sourceMappingURL=styles.css.map */
