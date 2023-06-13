@@ -16,28 +16,42 @@
   <body class="page__body">
     <header class="page-header">
       <nav class="page-header__nav container">
-        <a href="#">Procrastinator</a>
-        <button type="button">Toggle Menu</button>
-        <ul>
-          <li><a href="#hero-section">Intro</a></li>
-          <li><a href="#procrastinator">Procrastinator</a></li>
+        <a class="logo" href="#">Procrastinator</a>
+        <button class="button-hamburger" type="button">
+          <span class="visually-hidden">Toggle Menu</span>
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+        </button>
+        <ul class="header-menu">
+          <li>
+            <a href="#hero-section">Intro</a>
+          </li>
+          <li>
+            <a href="#features">Features</a>
+          </li>
+          <li>
+            <a href="#procrastinator">Try it</a>
+          </li>
         </ul>
       </nav>
     </header>
     <main> 
       <section class="hero-section"> 
-        <div class="container"> 
+        <div class="container hero-section__wrapper"> 
           <div class="hero-section__content">
             <h1 class="hero-section__title title">Explore the future of <span class="title__accent">Procrastination</span></h1>
             <p class="hero-section__text">Let"s explore and create your own procrastiantion style.</p>
-            <button type="button"></button>
+            <a class="button button--secondary" type="button">Get started</a>
             <ul class="hero-section__features">
               <li>9 way to spend time</li>
               <li>350 lines of code </li>
               <li>150 hours of pure procrastination</li>
             </ul>
           </div>
-          <div class="hero-section__image-wrapper"> <img class="hero-section__image" src="" width="566" height="566" alt="A person satisfied with our project."></div>
+          <div class="hero-section__image-wrapper">
+            <img class="hero-section__image" src="/source/images/hero_image.png" width="566" height="566" alt="A person satisfied with our project.">
+          </div>
         </div>
       </section>
       <section class="info"> 
@@ -50,7 +64,7 @@
           </div>
         </div>
       </section>
-      <section class="features"> 
+      <section class="features" id="features"> 
         <div class="container"> 
           <h2 class="subtitle">Breathtaking features of Procrastinator</h2>
           <p> </p>
@@ -80,5 +94,6 @@
         </div>
       </section>
     </main>
+    <script src="menu.js"></script>
   </body>
 </html>
