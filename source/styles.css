@@ -25,7 +25,6 @@
 }
 
 .container {
-  padding-inline: 120px;
   width: 95%;
   margin: 0 auto;
 }
@@ -43,6 +42,7 @@
 }
 
 .subtitle {
+  font-family: "Orbitron", Arial, Helvetica, sans-serif;
   font-size: 35px;
   line-height: 1.2;
   font-weight: 600;
@@ -85,7 +85,7 @@
 
 .logo {
   display: block;
-  font-family: "Orbitron";
+  font-family: "Orbitron", Arial, Helvetica, sans-serif;
   font-size: 22px;
   line-height: 1.2;
   color: #ffffff;
@@ -124,7 +124,7 @@
 .header-menu a {
   display: block;
   padding: 45px 25px;
-  font-family: "Poppins";
+  font-family: "Poppins", Helvetica, Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -233,7 +233,7 @@
 .hero-section__features-number {
   display: block;
   margin-bottom: 8px;
-  font-family: "Orbitron";
+  font-family: "Orbitron", Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: 500;
 }
@@ -273,6 +273,10 @@
   margin: 0 auto;
 }
 
+.info {
+  padding-bottom: 160px;
+}
+
 .info__wrapper {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -298,6 +302,49 @@
 
 .info__image {
   display: block;
+}
+
+.features__header {
+  margin: 0;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.features__slogan {
+  margin: 0;
+  margin-bottom: 87px;
+  text-align: center;
+}
+
+.features__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(375px, 1fr));
+  gap: 27px;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.features__item {
+  width: 375px;
+  margin: 0 auto;
+  padding: 18px 18px;
+  background-color: #090823;
+  border-top-right-radius: 20px;
+}
+
+.features__image {
+  display: block;
+}
+
+.features__title {
+  font-family: "Orbitron";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.procrastinator__wrapper {
+  text-align: center;
 }
 
 /*# sourceMappingURL=styles.css.map */
