@@ -370,7 +370,7 @@
 }
 
 .procrastinator {
-  padding-bottom: 30px;
+  padding-block: 45px;
 }
 
 .procrastinator__wrapper {
@@ -385,7 +385,7 @@
 }
 
 .procratinator__image {
-  width: 60%;
+  width: 80%;
   height: auto;
 }
 
