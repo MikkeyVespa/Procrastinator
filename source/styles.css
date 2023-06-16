@@ -292,9 +292,16 @@
 
 .info__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 532px 1fr;
   align-items: center;
-  gap: 150px;
+  gap: 100px;
+}
+@media (max-width: 1024px) {
+  .info__wrapper {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 50px;
+  }
 }
 
 .info__images {
@@ -315,6 +322,12 @@
 
 .info__image {
   display: block;
+}
+
+@media (max-width: 1024px) {
+  .info__content {
+    text-align: center;
+  }
 }
 
 .features__header {
