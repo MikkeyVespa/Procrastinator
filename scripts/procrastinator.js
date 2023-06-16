@@ -28,7 +28,7 @@ let phrases = [
     smoothly(image, 'src', randomElement.image);
     
     if (randomElement.text === 'Юрий Дудь') {
-      videoButton.style.display = 'block';
+      videoButton.style.display = 'inline-flex';
     } else {
       videoButton.style.display = 'none';
     }

@@ -378,11 +378,14 @@
 }
 
 .procrastinator__text {
-  margin-bottom: 30px;
+  font-size: 42px;
+  font-weight: bold;
+  line-height: 1.1;
+  margin-bottom: 70px;
 }
 
 .procratinator__image {
-  width: 100%;
+  width: 80%;
   height: auto;
 }
 
