@@ -97,7 +97,6 @@
 }
 
 .header-menu {
-  
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -215,6 +214,13 @@
   gap: 10px;
 }
 
+.hero-section__content {
+
+  @media (max-width: 425px) {
+    order: 2;
+  }
+}
+
 .hero-section__title {
   margin: 0;
   margin-bottom: 20px;
@@ -254,6 +260,11 @@
 
 .hero-section__image-wrapper {
   position: relative;
+  overflow: hidden;
+
+  @media (max-width: 425px) {
+    order: 1;
+  }
 
   &::before {
     position: absolute;
@@ -320,11 +331,6 @@
 
 .info__image {
   display: block;
-}
-
-.info__content {
-}
-.features {
 }
 
 .features__header {

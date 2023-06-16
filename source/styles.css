@@ -206,6 +206,12 @@
   gap: 10px;
 }
 
+@media (max-width: 425px) {
+  .hero-section__content {
+    order: 2;
+  }
+}
+
 .hero-section__title {
   margin: 0;
   margin-bottom: 20px;
@@ -245,6 +251,12 @@
 
 .hero-section__image-wrapper {
   position: relative;
+  overflow: hidden;
+}
+@media (max-width: 425px) {
+  .hero-section__image-wrapper {
+    order: 1;
+  }
 }
 .hero-section__image-wrapper::before {
   position: absolute;
