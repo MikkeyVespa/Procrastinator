@@ -16,11 +16,11 @@ let phrases = [
     return arr[randIndex];
   }
   
-  let button = document.querySelector('.button');
+  let button = document.querySelector('#button');
   let videoButton = document.querySelector('.video-button');
   let phrase = document.querySelector('.phrase');
   let advice = document.querySelector('.advice');
-  let image = document.querySelector('.image');
+  let image = document.querySelector('.procratinator__image');
   
   button.addEventListener('click', function () {
     let randomElement = getRandomElement(phrases);
