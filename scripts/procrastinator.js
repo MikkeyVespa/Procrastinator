@@ -19,7 +19,7 @@ let phrases = [
   let button = document.querySelector('#button');
   let videoButton = document.querySelector('#video-button');
   let phrase = document.querySelector('.phrase');
-  let advice = document.querySelector('.advice');
+  let advice = document.querySelector('.procrastinator__text');
   let image = document.querySelector('.procratinator__image');
   
   button.addEventListener('click', function () {
