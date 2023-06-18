@@ -146,6 +146,28 @@
   }
 }
 
+.line {
+  display: block;
+  height: 4px;
+  width: 100%;
+  border-radius: 10px;
+  background: #ffffff;
+}
+
+.line1 {
+  transform-origin: 0% 0%;
+  transition: transform 0.4s ease-in-out;
+}
+
+.line2 {
+  transition: transform 0.2s ease-in-out;
+}
+
+.line3 {
+  transform-origin: 0% 100%;
+  transition: transform 0.4s ease-in-out;
+}
+
 .button-hamburger {
   display: none;
   
@@ -179,28 +201,6 @@
   &--active .line3 {
     transform: rotate(-45deg);
   }
-}
-
-.line {
-  display: block;
-  height: 4px;
-  width: 100%;
-  border-radius: 10px;
-  background: #ffffff;
-}
-
-.line1 {
-  transform-origin: 0% 0%;
-  transition: transform 0.4s ease-in-out;
-}
-
-.line2 {
-  transition: transform 0.2s ease-in-out;
-}
-
-.line3 {
-  transform-origin: 0% 100%;
-  transition: transform 0.4s ease-in-out;
 }
 
 .hero-section {
@@ -272,7 +272,7 @@
     left: 0;
     width: 64px;
     height: 73px;
-    background-image: url("/source/images/stars_icons.svg");
+    background-image: url("/assets/images/stars_icons.svg");
     content: "";
   }
 
@@ -325,11 +325,11 @@
   background-position: top center;
 
   &:first-child {
-    // background-image: url("/source/images/border-illustration_1.svg"); // TODO
+    // background-image: url("/assets/images/border-illustration_1.svg"); // TODO
   }
 
   &:last-child {
-    // background-image: url("/source/images/border-illustration_2.svg"); // TODO
+    // background-image: url("/assets/images/border-illustration_2.svg"); // TODO
     align-self: flex-end;
     margin-left: -56px;
   }
@@ -379,7 +379,7 @@
 }
 
 .features__title {
-  font-family: "Orbitron";
+  font-family: "Orbitron", Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 600;
 }
@@ -393,7 +393,7 @@
 }
 
 .procrastinator__inner-wrapper {
-  //
+  // TODO
 }
 
 .procrastinator__text {
