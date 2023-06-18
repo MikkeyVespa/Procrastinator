@@ -1,0 +1,23 @@
+doctype html
+html(lang="en" data-theme="light")
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible' content='IE=edge')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    title Procrastinator &ndash; Don&apos;t write your code like a pro!
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700&display=swap' rel='stylesheet')
+    link(rel='preconnect' href='https://fonts.googleapis.com')
+    link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+    link(href='https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap' rel='stylesheet')
+    link(rel='stylesheet' href='styles.css')
+    link(rel='icon' type='image' href='https://code.s3.yandex.net/web-code/js-favicon.ico')
+  body.page
+    include blocks/header
+    main.content
+      include blocks/hero
+    footer.footer
+      include blocks/footer
+    script(src="https://code.s3.yandex.net/web-code/smoothly.js")
+    script(src="scripts.js") 

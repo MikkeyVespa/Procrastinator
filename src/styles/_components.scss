@@ -1,0 +1,92 @@
+//- SERVICE STYLES
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  object-fit: contain;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+//- BASIC LAYOUTS
+.page {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  max-width: $max-page-width;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &--horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+//- TEXT COMPONENTS
+.title {
+  margin: 0;
+  margin-bottom: 2rem;
+  font-family: $basic-font;
+  font-size: 3rem;
+  font-weight: 600;
+  
+  &--second {
+    font-size: 2.5rem;
+  }
+
+  &--third {
+    font-size: 2rem;
+  }
+}
+
+.subtitle {
+  font-family: $basic-font;
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+//- BUTTONS
+.button {
+  display: inline-flex;
+  padding: 15px 32px;
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  color: transparent;
+  background-color: $accent-color;
+
+  &--secondary {
+    background-color: $secondary-color;
+  }
+}
+
+//- FORM COMPONENTS
