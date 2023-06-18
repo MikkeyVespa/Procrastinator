@@ -30,6 +30,7 @@
 }
 
 .title {
+  margin: 0;
   font-family: "Orbitron", Arial, Helvetica, sans-serif;
   font-size: 45px;
   line-height: 68px;
@@ -40,13 +41,17 @@
     line-height: 72px;
     font-weight: 700;
   }
+
+  &--secondary {
+    font-family: "Orbitron", Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    line-height: 1.2;
+    font-weight: 600;
+  }
 }
 
 .subtitle {
-  font-family: "Orbitron", Arial, Helvetica, sans-serif;
-  font-size: 35px;
-  line-height: 1.2;
-  font-weight: 600;
+  
 
   &__accent {
     /* TODO */
@@ -357,27 +362,13 @@
 .info__images {
   display: flex;
   flex-wrap: wrap;
-  width: 532px;
-  height: 439px;
-}
-
-.info__image-wrapper {
-  background-repeat: no-repeat;
-  background-position: top center;
-
-  &:first-child {
-    // background-image: url("/assets/images/border-illustration_1.svg"); // TODO
-  }
-
-  &:last-child {
-    // background-image: url("/assets/images/border-illustration_2.svg"); // TODO
-    align-self: flex-end;
-    margin-left: -56px;
-  }
 }
 
 .info__image {
   display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .info__content {
@@ -428,6 +419,7 @@
 
 /* Procrastinator */
 .procrastinator {
+  height: 100vh;
   padding-block: 45px;
 }
 
@@ -436,18 +428,45 @@
 }
 
 .procrastinator__inner-wrapper {
-  // TODO
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  background: transparent;
+  padding: 1rem 1rem;
+  background-image: linear-gradient(90deg, #010208, #010208),
+    linear-gradient(135deg, hsl(289, 65%, 64%), hsl(226, 78%, 67%));
+  background-clip: padding-box, border-box;
+  background-origin: border-box;
+  border: 1px solid transparent;
+  border-radius: 1.75rem;
 }
 
 .procrastinator__text {
   margin: 0;
+  margin-bottom: 2rem;
   font-size: 42px;
   font-weight: bold;
   line-height: 1.1;
-  min-height: 110px;
+  // min-height: 110px;
 }
 
 .procratinator__image {
-  width: 70%;
-  height: auto;
+  height: 50vh;
+  width: auto;
+
+  @media (max-width: 768px) {
+    height: 40vh;
+  }
+
+  @media (max-width: 640px) {
+    height: 35vh;
+  }
+
+  @media (max-width: 425px) {
+    height: 30vh;
+  }
+
+  @media (max-width: 375px) {
+    height: 25vh;
+  }
 }
