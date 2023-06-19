@@ -1,7 +1,7 @@
 {
-  "name": "landing-page-boilerplate",
+  "name": "procrastinator",
   "version": "1.0.0",
-  "description": "Landing page boilerplate (static site)",
+  "description": "Professional tool for procrastination",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
