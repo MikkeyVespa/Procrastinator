@@ -1,3 +1,5 @@
+import Translator from "./translator";
+
 // Procrastinator
 const phrases = [
   {
@@ -92,6 +94,24 @@ const menuButton = document.querySelector('.button-hamburger');
 menuButton.addEventListener('click', () =>
   menuButton.classList.toggle('button-hamburger--active')
 );
+
+// Translator
+
+const translator = new Translator({
+  persist: false,
+  languages: ["ru", "en", "be"],
+  defaultLanguage: "ru",
+  detectLanguage: true,
+  filesLocation: "/content"
+});
+
+translator.load();
+
+document.querySelector("form").addEventListener("click", (evt) => {
+  if (evt.target.tagName === "INPUT") {
+    translator.load(evt.target.value);
+  }
+});
 
 // // Theme Toggler
 // const toggle = document.getElementById('theme-toggle');
