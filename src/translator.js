@@ -5,7 +5,7 @@
 class Translator {
   constructor(options = {}) {
     this._options = { ...this.defaultConfig, ...options};
-    this._elements = document.querySelectorAll("[data-i18n]");
+    this._elements = document.querySelectorAll("[data-translator]");
     this._cache = new Map();
 
     if (this._options.detectLanguage) {
@@ -110,15 +110,15 @@ class Translator {
     const nullSafeSplit = (str, separator) => (str ? str.split(separator) : null);
 
     const replace = element => {
-      const keys = nullSafeSplit(element.getAttribute("data-i18n"), " ") || [];
+      const keys = nullSafeSplit(element.getAttribute("data-translator"), " ") || [];
       const properties = nullSafeSplit(
-        element.getAttribute("data-i18n-attr"),
+        element.getAttribute("data-translator-attr"),
         " "
       ) || ["innerHTML"];
 
       if (keys.length > 0 && keys.length !== properties.length) {
         console.error(
-          "data-i18n and data-i18n-attr must contain the same number of items"
+          "data-translator and data-translator-attr must contain the same number of items"
         );
       } else {
         const pairs = zip(keys, properties);

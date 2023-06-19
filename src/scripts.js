@@ -99,8 +99,8 @@ menuButton.addEventListener('click', () =>
 
 const translator = new Translator({
   persist: false,
-  languages: ["ru", "en", "be"],
-  defaultLanguage: "ru",
+  languages: ["en", "ru", "be"],
+  defaultLanguage: "en",
   detectLanguage: true,
   filesLocation: "/content"
 });

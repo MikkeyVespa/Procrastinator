@@ -3,18 +3,18 @@ section.hero-section
     .hero-section__image-wrapper
       img.hero-section__image(src='assets/images/hero_image.png' width='566' height='566' alt='A person satisfied with our project.')
     .hero-section__content
-      h1.hero-section__title.title
+      h1.hero-section__title.title(data-translator='hero.title')
         | Explore the future of 
-        span.title__accent Procrastination
-      p.hero-section__text Let&lsquo;s explore and create your own procrastiantion style.
-      a.hero-section__button.button.button--secondary Get started
+        span.title__accent(data-translator='hero.title-accent') Procrastination
+      p.hero-section__text(data-translator='hero.text') Let&lsquo;s explore and create your own procrastiantion style.
+      a.hero-section__button.button.button--secondary(data-translator='hero.button') Get started
       ul.hero-section__features-list
         li
           span.hero-section__features-number 10+
-          p.hero-section__features-text unqiue ways
+          p.hero-section__features-text(data-translator='hero.features.$0') unqiue ways
         li
           span.hero-section__features-number 500+
-          p.hero-section__features-text lines of code 
+          p.hero-section__features-text(data-translator='hero.features.$1') lines of code 
         li
           span.hero-section__features-number 150+
-          p.hero-section__features-text hours of joy
+          p.hero-section__features-text(data-translator='hero.features.$2') hours of joy
