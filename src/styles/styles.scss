@@ -1,12 +1,14 @@
 /* Basic styles */
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
 
 .page__body {
   margin: 0;
   background-color: #010208;
-  font-family: "Poppins", Helvetica, Arial, sans-serif;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 30px;
   box-sizing: border-box;
@@ -15,12 +17,12 @@
 
 /* Common elements */
 .visually-hidden {
-  clip: rect(0 0 0 0); 
+  clip: rect(0 0 0 0);
   clip-path: inset(50%);
   height: 1px;
   overflow: hidden;
   position: absolute;
-  white-space: nowrap; 
+  white-space: nowrap;
   width: 1px;
 }
 
@@ -31,7 +33,7 @@
 
 .title {
   margin: 0;
-  font-family: "Orbitron", Arial, Helvetica, sans-serif;
+  font-family: 'Orbitron', Arial, Helvetica, sans-serif;
   font-size: 45px;
   line-height: 68px;
   font-weight: 600;
@@ -43,7 +45,7 @@
   }
 
   &--secondary {
-    font-family: "Orbitron", Arial, Helvetica, sans-serif;
+    font-family: 'Orbitron', Arial, Helvetica, sans-serif;
     font-size: 35px;
     line-height: 1.2;
     font-weight: 600;
@@ -85,7 +87,7 @@
 
 .logo {
   display: block;
-  font-family: "Orbitron", Arial, Helvetica, sans-serif;
+  font-family: 'Orbitron', Arial, Helvetica, sans-serif;
   font-size: 22px;
   line-height: 1.2;
   color: #ffffff;
@@ -118,8 +120,8 @@
 
   & a {
     display: block;
-    padding: 45px 20px; 
-    font-family: "Poppins", Helvetica, Arial, sans-serif;
+    padding: 45px 20px;
+    font-family: 'Poppins', Helvetica, Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -128,7 +130,7 @@
     text-decoration: none;
 
     @media (max-width: 768px) {
-      padding: 45px 8px; 
+      padding: 45px 8px;
     }
 
     &:hover {
@@ -166,13 +168,13 @@
 
 .button-hamburger {
   display: none;
-  
+
   @media (max-width: 425px) {
     position: relative;
     z-index: 2;
     width: 32px;
     height: 26px;
-    padding:0 ;
+    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -185,15 +187,15 @@
     display: flex;
     transform: translateX(0);
   }
-  
+
   &--active .line1 {
     transform: rotate(45deg);
   }
-  
+
   &--active .line2 {
     transform: scaleY(0);
   }
-  
+
   &--active .line3 {
     transform: rotate(-45deg);
   }
@@ -239,8 +241,8 @@
     left: 0;
     width: 64px;
     height: 73px;
-    background-image: url("/assets/images/stars_icons.svg");
-    content: "";
+    background-image: url('/assets/images/stars_icons.svg');
+    content: '';
 
     @media (max-width: 768px) {
       top: 50px;
@@ -255,7 +257,7 @@
     height: 300px;
     background: #000000;
     filter: blur(60px);
-    content: "";
+    content: '';
   }
 }
 
@@ -273,7 +275,6 @@
 }
 
 .hero-section__title .title__accent {
-
   @media (max-width: 768px) {
     font-size: 40px;
   }
@@ -316,7 +317,7 @@
 .hero-section__features-number {
   display: block;
   margin-bottom: 8px;
-  font-family: "Orbitron", Helvetica, Arial, sans-serif;
+  font-family: 'Orbitron', Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: 500;
 }
@@ -404,7 +405,7 @@
 }
 
 .features__title {
-  font-family: "Orbitron", Arial, Helvetica, sans-serif;
+  font-family: 'Orbitron', Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 600;
 }
