@@ -1,15 +1,45 @@
 // Procrastinator
 const phrases = [
-  { text: 'отправить другу смешную гифку', image: 'https://code.s3.yandex.net/web-code/procrastinate/1.gif' },
-  { text: 'посмотреть скидки на авиабилеты', image: 'https://code.s3.yandex.net/web-code/procrastinate/2.png' },
-  { text: 'разобраться, о чём поют рэперы', image: 'https://code.s3.yandex.net/web-code/procrastinate/3.png' },
-  { text: 'Юрий Дудь', image: 'https://code.s3.yandex.net/web-code/procrastinate/4.png' },
-  { text: 'расставить книги на полке по цвету', image: 'https://code.s3.yandex.net/web-code/procrastinate/5.png' },
-  { text: 'читать про зарплаты в Сан-Франциско', image: 'https://code.s3.yandex.net/web-code/procrastinate/6.png' },
-  { text: 'прочитать новости и ужаснуться в комментариях', image: 'https://code.s3.yandex.net/web-code/procrastinate/7.png' },
-  { text: 'попасть в поток грустных песен и вспомнить все ошибки молодости', image: 'https://code.s3.yandex.net/web-code/procrastinate/8.png' },
-  { text: 'посмотреть трейлер сериала и заодно первый сезон', image: 'https://code.s3.yandex.net/web-code/procrastinate/9.png' },
-  { text: 'проверить непрочитанное в Telegram-каналах', image: 'https://code.s3.yandex.net/web-code/procrastinate/10.png' },
+  {
+    text: 'отправить другу смешную гифку',
+    image: 'https://code.s3.yandex.net/web-code/procrastinate/1.gif',
+  },
+  {
+    text: 'посмотреть скидки на авиабилеты',
+    image: 'https://code.s3.yandex.net/web-code/procrastinate/2.png',
+  },
+  {
+    text: 'разобраться, о чём поют рэперы',
+    image: 'https://code.s3.yandex.net/web-code/procrastinate/3.png',
+  },
+  {
+    text: 'Юрий Дудь',
+    image: 'https://code.s3.yandex.net/web-code/procrastinate/4.png',
+  },
+  {
+    text: 'расставить книги на полке по цвету',
+    image: 'https://code.s3.yandex.net/web-code/procrastinate/5.png',
+  },
+  {
+    text: 'читать про зарплаты в Сан-Франциско',
+    image: 'https://code.s3.yandex.net/web-code/procrastinate/6.png',
+  },
+  {
+    text: 'прочитать новости и ужаснуться в комментариях',
+    image: 'https://code.s3.yandex.net/web-code/procrastinate/7.png',
+  },
+  {
+    text: 'попасть в поток грустных песен и вспомнить все ошибки молодости',
+    image: 'https://code.s3.yandex.net/web-code/procrastinate/8.png',
+  },
+  {
+    text: 'посмотреть трейлер сериала и заодно первый сезон',
+    image: 'https://code.s3.yandex.net/web-code/procrastinate/9.png',
+  },
+  {
+    text: 'проверить непрочитанное в Telegram-каналах',
+    image: 'https://code.s3.yandex.net/web-code/procrastinate/10.png',
+  },
 ];
 
 function getRandomElement(arr) {
@@ -51,12 +81,17 @@ for (let i = 0; i < 1; i += 1) {
 }
 
 videoButton.addEventListener('click', () => {
-  window.open('https://www.youtube.com/channel/UCMCgOm8GZkHp8zJ6l7_hIuA', '_blank');
+  window.open(
+    'https://www.youtube.com/channel/UCMCgOm8GZkHp8zJ6l7_hIuA',
+    '_blank'
+  );
 });
 
 // Menu toggler
 const menuButton = document.querySelector('.button-hamburger');
-menuButton.addEventListener('click', () => menuButton.classList.toggle('button-hamburger--active'));
+menuButton.addEventListener('click', () =>
+  menuButton.classList.toggle('button-hamburger--active')
+);
 
 // // Theme Toggler
 // const toggle = document.getElementById('theme-toggle');
