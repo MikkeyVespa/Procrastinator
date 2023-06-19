@@ -11,6 +11,7 @@
     "lint": "npx eslint . && npx stylelint '**/*.scss'",
     "lint:js": "npx eslint .",
     "lint:scss": "npx stylelint '**/*.scss'",
+    "prettify": "npx prettier --write 'src/**/*.{js,scss}'",
     "build:scss-to-css": "node-sass src/styles/styles.scss -o build/css",
     "build:pug-to-html": "pug src/index.pug -o build --pretty",
     "build:post-css": "postcss --no-map --use autoprefixer cssnano -d build/css --ext .min.css build/css/*.css",
