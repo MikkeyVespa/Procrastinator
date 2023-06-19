@@ -36,7 +36,7 @@
     "live-server": "^1.2.2",
     "node-sass": "^8.0.0",
     "postcss-cli": "^10.1.0",
-    "prettier": "2.8.8",
+    "prettier": "^1.19.1",
     "prettier-airbnb-config": "^1.0.0",
     "pug-cli": "^1.0.0-alpha6",
     "stylelint": "^15.7.0",
