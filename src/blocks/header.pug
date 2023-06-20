@@ -13,3 +13,16 @@ header.page-header
         a(href='#features' data-translator='header.$1') Features
       li
         a(href='#procrastinator' data-translator='header.$2') Try it
+    .divider 
+    form.language-selector
+      fieldset
+        legend.visually-hidden Choose a language:
+        label
+          input(type='radio', name='lang', value='en', checked='')
+          |  EN
+        label
+          input(type='radio', name='lang', value='ru')
+          |  RU
+        label
+          input(type='radio', name='lang', value='be')
+          |  BE

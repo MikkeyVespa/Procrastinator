@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-console */
 /* eslint-disable no-underscore-dangle */
 /* eslint-disable no-param-reassign */
@@ -146,9 +147,7 @@ class Translator {
       languages: ["en"],
       defaultLanguage: "",
       detectLanguage: true,
-      filesLocation: "/i18n"
+      filesLocation: "/content"
     };
   }
 }
-
-export default Translator;

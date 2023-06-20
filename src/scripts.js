@@ -1,5 +1,3 @@
-import Translator from "./translator";
-
 // Procrastinator
 const phrases = [
   {
@@ -97,6 +95,7 @@ menuButton.addEventListener('click', () =>
 
 // Translator
 
+// eslint-disable-next-line no-undef
 const translator = new Translator({
   persist: false,
   languages: ["en", "ru", "be"],
@@ -107,7 +106,7 @@ const translator = new Translator({
 
 translator.load();
 
-document.querySelector("form").addEventListener("click", (evt) => {
+document.querySelector(".language-selector").addEventListener("click", (evt) => {
   if (evt.target.tagName === "INPUT") {
     translator.load(evt.target.value);
   }

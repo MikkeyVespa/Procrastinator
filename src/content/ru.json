@@ -1,9 +1,9 @@
 {
   "header": {
-    "logo": "Procrastinator",
-    "$0": "Intro",
-    "$1": "Features",
-    "$2": "Try it"
+    "logo": "Прокрастинатор",
+    "$0": "О проекте",
+    "$1": "Возможности",
+    "$2": "Попробовать"
   },
   "hero": {
     "title": "Explore the future of",
@@ -18,7 +18,7 @@
   },
   "info": {
     "title": "What is Procratinator",
-    "text": "What is robot? Robot is a special machine to make your life easier, more comfortable. A brand new robot for your procrastination is here!",
+    "$text": "What is robot? Robot is a special machine to make your life easier, more comfortable. A brand new robot for your procrastination is here!",
     "button": "Know More"
   },
   "features": {
