@@ -1,4 +1,10 @@
 /* Basic styles */
+
+@font-face {
+  font-family: 'Neuropol';
+  src: url("assets/fonts/Neuropol.otf") format("opentype");
+}
+
 *,
 *:before,
 *:after {
@@ -8,7 +14,7 @@
 .page__body {
   margin: 0;
   background-color: #010208;
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-family: 'Neuropol', Helvetica, Arial, sans-serif;
   font-size: 18px;
   line-height: 30px;
   box-sizing: border-box;
@@ -33,7 +39,7 @@
 
 .title {
   margin: 0;
-  font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+  font-family: 'Neuropol', 'Orbitron', Arial, Helvetica, sans-serif;
   font-size: 45px;
   line-height: 68px;
   font-weight: 600;
@@ -45,7 +51,7 @@
   }
 
   &--secondary {
-    font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+    font-family: 'Orbitron', 'Neuropol', Arial, Helvetica, sans-serif;
     font-size: 35px;
     line-height: 1.2;
     font-weight: 600;
@@ -87,7 +93,7 @@
 
 .logo {
   display: block;
-  font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+  font-family: 'Orbitron', 'Neuropol', Arial, Helvetica, sans-serif;
   font-size: 22px;
   line-height: 1.2;
   color: #ffffff;
@@ -317,7 +323,7 @@
 .hero-section__features-number {
   display: block;
   margin-bottom: 8px;
-  font-family: 'Orbitron', Helvetica, Arial, sans-serif;
+  font-family: 'Orbitron', 'Neuropol', Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight: 500;
 }
@@ -405,7 +411,7 @@
 }
 
 .features__title {
-  font-family: 'Orbitron', Arial, Helvetica, sans-serif;
+  font-family: 'Orbitron', 'Neuropol', Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-weight: 600;
 }

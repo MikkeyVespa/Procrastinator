@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "live-server --watch=\"build/*.css,build/*.html\" --mount=/:build --port=3001 --host=127.0.0.1",
     "clean": "del-cli build/*",
-    "copy": "cpx 'src/**/*.{html,png,jpg,svg,ttf,woff,woff2,js,json,webmanifest}' build",
+    "copy": "cpx 'src/**/*.{html,png,jpg,svg,ttf,otf,woff,woff2,js,json,webmanifest}' build",
     "lint": "npx eslint . && npx stylelint '**/*.scss'",
     "lint:js": "npx eslint .",
     "lint:scss": "npx stylelint '**/*.scss'",
@@ -18,7 +18,7 @@
     "build": "del-cli build/* && npm run lint:scss && npm run build:scss-to-css && npm run build:post-css && npm run build:pug-to-html && npm run copy",
     "watch:scss-to-css": "node-sass --watch src/styles/styles.scss -o build/css",
     "watch:pug-to-html": "pug src/index.pug -o build --watch --pretty",
-    "watch:copy": "cpx 'src/**/*.{html,png,jpg,svg,ttf,woff,woff2,js,json,webmanifest}' build --watch",
+    "watch:copy": "cpx 'src/**/*.{html,png,jpg,svg,ttf,otf,woff,woff2,js,json,webmanifest}' build --watch",
     "start": "npm run build && concurrently \"npm run serve\" \"npm run watch:scss-to-css\" \"npm run watch:pug-to-html\" \"npm run watch:copy\"",
     "prepublish": "npm run build"
   },

@@ -1,30 +1,27 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-console */
-/* eslint-disable no-underscore-dangle */
-/* eslint-disable no-param-reassign */
 // Translator
+// eslint-disable-next-line no-unused-vars
 class Translator {
   constructor(options = {}) {
-    this._options = { ...this.defaultConfig, ...options};
-    this._elements = document.querySelectorAll("[data-translator]");
-    this._cache = new Map();
+    this.options = { ...this.defaultConfig, ...options};
+    this.elements = document.querySelectorAll("[data-translator]");
+    this.cache = new Map();
 
-    if (this._options.detectLanguage) {
-      this._options.defaultLanguage = this._detectLanguage();
+    if (this.options.detectLanguage) {
+      this.options.defaultLanguage = this.detectLanguage();
     }
 
     if (
-      this._options.defaultLanguage &&
-      typeof this._options.defaultLanguage === "string"
+      this.options.defaultLanguage &&
+      typeof this.options.defaultLanguage === "string"
     ) {
-      this._getResource(this._options.defaultLanguage);
+      this.getResource(this.options.defaultLanguage);
     }
   }
 
-  _detectLanguage() {
+  detectLanguage() {
     const stored = localStorage.getItem("language");
 
-    if (this._options.persist && stored) {
+    if (this.options.persist && stored) {
       return stored;
     }
 
@@ -32,46 +29,46 @@ class Translator {
       ? navigator.languages[0]
       : navigator.language;
 
-    return lang.substr(0, 2);
+    return lang.slice(0, 2);
   }
   
-  // eslint-disable-next-line class-methods-use-this
-  _fetch(path) {
-    return fetch(path)
-      .then(response => response.json())
-      .catch(() => {
-        console.error(
-          `Could not load ${path}. Please make sure that the file exists.`
-        );
-      });
+  static async fetch(path) {
+    try {
+      const response = await fetch(path);
+      return await response.json();
+    } catch (error) {
+      // eslint-disable-next-line no-console
+      console.error(`Could not load ${path}. Please make sure that the file exists.`);
+      throw error;
+    }
   }
 
-  async _getResource(lang) {
-    if (this._cache.has(lang)) {
-      return JSON.parse(this._cache.get(lang));
+  async getResource(lang) {
+    if (this.cache.has(lang)) {
+      return JSON.parse(this.cache.get(lang));
     }
 
-    const translation = await this._fetch(
-      `${this._options.filesLocation}/${lang}.json`
+    const translation = await Translator.fetch(
+      `${this.options.filesLocation}/${lang}.json`
     );
 
-    if (!this._cache.has(lang)) {
-      this._cache.set(lang, JSON.stringify(translation));
+    if (!this.cache.has(lang)) {
+      this.cache.set(lang, JSON.stringify(translation));
     }
 
     return translation;
   }
 
   async load(lang) {
-    if (!this._options.languages.includes(lang)) {
+    if (!this.options.languages.includes(lang)) {
       return;
     }
 
-    this._translate(await this._getResource(lang));
+    this.translate(await this.getResource(lang));
 
     document.documentElement.lang = lang;
 
-    if (this._options.persist) {
+    if (this.options.persist) {
       localStorage.setItem("language", lang);
     }
   }
@@ -84,29 +81,30 @@ class Translator {
         `Expected a string for the key parameter, got ${typeof key} instead.`
       );
 
-    const translation = await this._getResource(lang);
+    const translation = await this.getResource(lang);
 
-    return this._getValueFromJSON(key, translation, true);
+    return this.getValueFromJSON(key, translation, true);
   }
 
-  _getValueFromJSON(key, json, fallback) {
+  getValueFromJSON(key, json, fallback) {
     let text = key.split(".").reduce((obj, i) => obj[i], json);
 
-    if (!text && this._options.defaultLanguage && fallback) {
+    if (!text && this.options.defaultLanguage && fallback) {
       const fallbackTranslation = JSON.parse(
-        this._cache.get(this._options.defaultLanguage)
+        this.cache.get(this.options.defaultLanguage)
       );
 
-      text = this._getValueFromJSON(key, fallbackTranslation, false);
+      text = this.getValueFromJSON(key, fallbackTranslation, false);
     } else if (!text) {
       text = key;
+      // eslint-disable-next-line no-console
       console.warn(`Could not find text for attribute "${key}".`);
     }
 
     return text;
   }
 
-  _translate(translation) {
+  translate(translation) {
     const zip = (keys, values) => keys.map((key, i) => [key, values[i]]);
     const nullSafeSplit = (str, separator) => (str ? str.split(separator) : null);
 
@@ -118,6 +116,7 @@ class Translator {
       ) || ["innerHTML"];
 
       if (keys.length > 0 && keys.length !== properties.length) {
+        // eslint-disable-next-line no-console
         console.error(
           "data-translator and data-translator-attr must contain the same number of items"
         );
@@ -125,23 +124,24 @@ class Translator {
         const pairs = zip(keys, properties);
         pairs.forEach(pair => {
           const [key, property] = pair;
-          const text = this._getValueFromJSON(key, translation, true);
+          const text = this.getValueFromJSON(key, translation, true);
 
           if (text) {
+            // eslint-disable-next-line no-param-reassign
             element[property] = text;
             element.setAttribute(property, text);
           } else {
+            // eslint-disable-next-line no-console
             console.error(`Could not find text for attribute "${key}".`);
           }
         });
       }
     };
 
-    this._elements.forEach(replace);
+    this.elements.forEach(replace);
   }
 
-  // eslint-disable-next-line class-methods-use-this
-  get defaultConfig() {
+  static defaultConfig() {
     return {
       persist: false,
       languages: ["en"],

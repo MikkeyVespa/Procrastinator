@@ -111,24 +111,3 @@ document.querySelector(".language-selector").addEventListener("click", (evt) => 
     translator.load(evt.target.value);
   }
 });
-
-// // Theme Toggler
-// const toggle = document.getElementById('theme-toggle');
-
-// eslint-disable-next-line max-len
-// const storedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-// if (storedTheme) {
-//   document.documentElement.setAttribute('data-theme', storedTheme);
-// }
-
-// toggle.addEventListener('click', () => {
-//   const currentTheme = document.documentElement.getAttribute('data-theme');
-//   let targetTheme = 'light';
-
-//   if (currentTheme === 'light') {
-//     targetTheme = 'dark';
-//   }
-
-//   document.documentElement.setAttribute('data-theme', targetTheme);
-//   localStorage.setItem('theme', targetTheme);
-// });
