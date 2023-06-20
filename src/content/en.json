@@ -7,7 +7,6 @@
   },
   "hero": {
     "title": "Explore the future of",
-    "title-accent": "Procrastinator",
     "text": "Let&lsquo;s explore and create your own procrastiantion style.",
     "button": "Get started",
     "features":{
@@ -36,7 +35,6 @@
   },
   "procrastinator": {
     "title": "Choose your",
-    "title-accent": "Destiny",
     "text": "Adipiscing at in tellus integer. Pellentesque massa placerat duis ultricies. Venenatis cras",
     "button": "Next idea",
     "button-additional": "Let&apos;s go"

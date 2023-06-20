@@ -2,7 +2,7 @@
 // eslint-disable-next-line no-unused-vars
 class Translator {
   constructor(options = {}) {
-    this.options = { ...this.defaultConfig, ...options};
+    this.options = { ...this.defaultConfig, ...options };
     this.elements = document.querySelectorAll("[data-translator]");
     this.cache = new Map();
 
@@ -31,7 +31,7 @@ class Translator {
 
     return lang.slice(0, 2);
   }
-  
+
   static async fetch(path) {
     try {
       const response = await fetch(path);
@@ -108,7 +108,7 @@ class Translator {
     const zip = (keys, values) => keys.map((key, i) => [key, values[i]]);
     const nullSafeSplit = (str, separator) => (str ? str.split(separator) : null);
 
-    const replace = element => {
+    const replace = (element) => {
       const keys = nullSafeSplit(element.getAttribute("data-translator"), " ") || [];
       const properties = nullSafeSplit(
         element.getAttribute("data-translator-attr"),
@@ -122,14 +122,17 @@ class Translator {
         );
       } else {
         const pairs = zip(keys, properties);
-        pairs.forEach(pair => {
+        pairs.forEach((pair) => {
           const [key, property] = pair;
           const text = this.getValueFromJSON(key, translation, true);
 
           if (text) {
-            // eslint-disable-next-line no-param-reassign
-            element[property] = text;
-            element.setAttribute(property, text);
+            if (property === "innerHTML") {
+              // eslint-disable-next-line no-param-reassign
+              element.innerHTML = text;
+            } else {
+              element.setAttribute(property, text);
+            }
           } else {
             // eslint-disable-next-line no-console
             console.error(`Could not find text for attribute "${key}".`);
@@ -147,7 +150,7 @@ class Translator {
       languages: ["en"],
       defaultLanguage: "",
       detectLanguage: true,
-      filesLocation: "/content"
+      filesLocation: "/content",
     };
   }
 }
