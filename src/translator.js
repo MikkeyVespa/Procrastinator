@@ -3,7 +3,7 @@
 class Translator {
   constructor(options = {}) {
     this.options = { ...this.defaultConfig, ...options };
-    this.elements = document.querySelectorAll("[data-translator]");
+    this.elements = document.querySelectorAll('[data-translator]');
     this.cache = new Map();
 
     if (this.options.detectLanguage) {
@@ -12,14 +12,14 @@ class Translator {
 
     if (
       this.options.defaultLanguage &&
-      typeof this.options.defaultLanguage === "string"
+      typeof this.options.defaultLanguage === 'string'
     ) {
       this.getResource(this.options.defaultLanguage);
     }
   }
 
   detectLanguage() {
-    const stored = localStorage.getItem("language");
+    const stored = localStorage.getItem('language');
 
     if (this.options.persist && stored) {
       return stored;
@@ -38,7 +38,9 @@ class Translator {
       return await response.json();
     } catch (error) {
       // eslint-disable-next-line no-console
-      console.error(`Could not load ${path}. Please make sure that the file exists.`);
+      console.error(
+        `Could not load ${path}. Please make sure that the file exists.`
+      );
       throw error;
     }
   }
@@ -69,14 +71,14 @@ class Translator {
     document.documentElement.lang = lang;
 
     if (this.options.persist) {
-      localStorage.setItem("language", lang);
+      localStorage.setItem('language', lang);
     }
   }
 
   async getTranslationByKey(lang, key) {
-    if (!key) throw new Error("Expected a key to translate, got nothing.");
+    if (!key) throw new Error('Expected a key to translate, got nothing.');
 
-    if (typeof key !== "string")
+    if (typeof key !== 'string')
       throw new Error(
         `Expected a string for the key parameter, got ${typeof key} instead.`
       );
@@ -87,7 +89,7 @@ class Translator {
   }
 
   getValueFromJSON(key, json, fallback) {
-    let text = key.split(".").reduce((obj, i) => obj[i], json);
+    let text = key.split('.').reduce((obj, i) => obj[i], json);
 
     if (!text && this.options.defaultLanguage && fallback) {
       const fallbackTranslation = JSON.parse(
@@ -106,28 +108,30 @@ class Translator {
 
   translate(translation) {
     const zip = (keys, values) => keys.map((key, i) => [key, values[i]]);
-    const nullSafeSplit = (str, separator) => (str ? str.split(separator) : null);
+    const nullSafeSplit = (str, separator) =>
+      str ? str.split(separator) : null;
 
-    const replace = (element) => {
-      const keys = nullSafeSplit(element.getAttribute("data-translator"), " ") || [];
+    const replace = element => {
+      const keys =
+        nullSafeSplit(element.getAttribute('data-translator'), ' ') || [];
       const properties = nullSafeSplit(
-        element.getAttribute("data-translator-attr"),
-        " "
-      ) || ["innerHTML"];
+        element.getAttribute('data-translator-attr'),
+        ' '
+      ) || ['innerHTML'];
 
       if (keys.length > 0 && keys.length !== properties.length) {
         // eslint-disable-next-line no-console
         console.error(
-          "data-translator and data-translator-attr must contain the same number of items"
+          'data-translator and data-translator-attr must contain the same number of items'
         );
       } else {
         const pairs = zip(keys, properties);
-        pairs.forEach((pair) => {
+        pairs.forEach(pair => {
           const [key, property] = pair;
           const text = this.getValueFromJSON(key, translation, true);
 
           if (text) {
-            if (property === "innerHTML") {
+            if (property === 'innerHTML') {
               // eslint-disable-next-line no-param-reassign
               element.innerHTML = text;
             } else {
@@ -147,10 +151,10 @@ class Translator {
   static defaultConfig() {
     return {
       persist: false,
-      languages: ["en"],
-      defaultLanguage: "",
+      languages: ['en'],
+      defaultLanguage: '',
       detectLanguage: true,
-      filesLocation: "/content",
+      filesLocation: '/content'
     };
   }
 }

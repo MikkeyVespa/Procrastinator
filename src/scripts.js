@@ -98,16 +98,16 @@ menuButton.addEventListener('click', () =>
 // eslint-disable-next-line no-undef
 const translator = new Translator({
   persist: false,
-  languages: ["en", "ru", "be"],
-  defaultLanguage: "en",
+  languages: ['en', 'ru', 'be'],
+  defaultLanguage: 'en',
   detectLanguage: true,
-  filesLocation: "/content"
+  filesLocation: '/content'
 });
 
 translator.load();
 
-document.querySelector(".language-selector").addEventListener("click", (evt) => {
-  if (evt.target.tagName === "INPUT") {
+document.querySelector('.language-selector').addEventListener('click', evt => {
+  if (evt.target.tagName === 'INPUT') {
     translator.load(evt.target.value);
   }
 });
