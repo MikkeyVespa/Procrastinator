@@ -68,17 +68,36 @@
   font-weight: 500;
   font-size: 20px;
   line-height: 30px;
-  background-color: transparent;
-  background-image: linear-gradient(97.16deg, #d10ed1 12.04%, #10a3da 81.84%);
   border-radius: 5px;
   cursor: pointer;
+  border: none;
+  background-size: 300% 100%;
+  -o-transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  background-image: linear-gradient(to right, #10a3da, #d10ed1, #10a3da, #d10ed1);
+  box-shadow: 0 4px 15px 0 rgba(116, 79, 168, 0.75);
+
+  &:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
 
   &--secondary {
     background-image: none;
     border-width: 1px;
     border-style: solid;
     border-image: linear-gradient(to right, #d10ed1, #10a3da) 1;
+    box-shadow: none;
     border-radius: 5px;
+    box-shadow: 0px 5px 55px 10px rgba(#d10ed1, 0.7);
+
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 5px 20px 2px rgba(#d10ed1, 0.7);
+    }
   }
 }
 
