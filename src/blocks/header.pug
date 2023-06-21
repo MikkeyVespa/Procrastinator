@@ -6,20 +6,22 @@ header.page-header
       span.line.line1
       span.line.line2
       span.line.line3
-    ul.header-menu
-      li
-        a(href='#hero-section' data-translator='header.$0') Intro
-      li
-        a(href='#features' data-translator='header.$1') Features
-      li
-        a(href='#procrastinator' data-translator='header.$2') Try it
-    .divider 
-    form.language-selector
-      fieldset
-        legend.visually-hidden Choose a language:
-        label
-          input(type='radio', name='lang', value='en', checked='')
-          |  EN
-        label
-          input(type='radio', name='lang', value='ru')
-          |  RU
+    .page-header__wrapper
+      ul.header-menu
+        li
+          a(href='#hero-section' data-translator='header.$0') Intro
+        li
+          a(href='#features' data-translator='header.$1') Features
+        li
+          a(href='#procrastinator' data-translator='header.$2') Try it
+      .divider
+      form.language-selector
+        fieldset.language-selector__fieldset
+          legend 
+          span.visually-hidden Choose a language:
+          input#lang-en.visually-hidden(type='radio', name='lang', value='en', checked)
+          label(for='lang-en')
+            |  EN
+          input#lang-ru.visually-hidden(type='radio', name='lang', value='ru')
+          label(for='lang-ru')
+            |  RU

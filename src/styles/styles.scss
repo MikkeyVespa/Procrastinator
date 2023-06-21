@@ -31,6 +31,13 @@
   margin: 0 auto;
 }
 
+.divider {
+  width: 2px;
+  height: 2rem;
+  background-color: #ffffff;
+  margin-inline: 4px;
+}
+
 .title {
   margin: 0;
   font-family: 'Orbitron', 'Unbounded', Arial, Helvetica, sans-serif;
@@ -76,13 +83,23 @@
 }
 
 /* Header */
-.page-header__nav {
+.page-header {
+
+  &__nav {
   position: relative;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   min-height: 114px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
 .logo {
@@ -140,6 +157,32 @@
 
     &:active {
       opacity: 0.3;
+    }
+  }
+}
+
+.language-selector {
+
+  &__fieldset {
+    margin: 0;
+    padding: 0 10px;
+    border: none;
+  }
+
+  & label {
+    padding: 20px 10px;
+    cursor: pointer;
+    opacity: 0.3;
+
+    &:hover, &:active {
+      opacity: 0.6;
+    }
+  }
+
+  & input {
+
+    &:checked + label {
+      opacity: 1;
     }
   }
 }
