@@ -1,4 +1,4 @@
-export class Tile {
+export default class Tile {
   constructor(gridElement) {
     this.tileElement = document.createElement("div");
     this.tileElement.classList.add("tile");

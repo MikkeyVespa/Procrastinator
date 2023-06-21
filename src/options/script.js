@@ -4,8 +4,8 @@
 /* eslint-disable no-alert */
 /* eslint-disable no-use-before-define */
 /* eslint-disable import/extensions */
-import { Grid } from "./grid.js";
-import { Tile } from "./tile.js";
+import Grid from "./grid";
+import Tile from "./tile";
 
 const gameBoard = document.getElementById("game-board");
 
