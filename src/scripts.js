@@ -37,6 +37,10 @@ const phrases = [
     image: 'https://code.s3.yandex.net/web-code/procrastinate/9.png'
   },
   {
+    text: 'поставить новый рекорд в 2048!',
+    image: 'https://code.s3.yandex.net/web-code/procrastinate/9.png'
+  },
+  {
     text: 'проверить непрочитанное в Telegram-каналах',
     image: 'https://code.s3.yandex.net/web-code/procrastinate/10.png'
   }
@@ -60,7 +64,7 @@ button.addEventListener('click', () => {
   // eslint-disable-next-line no-undef
   smoothly(image, 'src', randomElement.image);
 
-  if (randomElement.text === 'Юрий Дудь') {
+  if (randomElement.text === 'Юрий Дудь' || randomElement.text === 'поставить новый рекорд в 2048!') {
     videoButton.style.display = 'inline-flex';
   } else {
     videoButton.style.display = 'none';
@@ -81,10 +85,12 @@ for (let i = 0; i < 1; i += 1) {
 }
 
 videoButton.addEventListener('click', () => {
-  window.open(
-    'https://www.youtube.com/channel/UCMCgOm8GZkHp8zJ6l7_hIuA',
-    '_blank'
-  );
+  const currentText = phrase.textContent;
+  if (currentText === 'Юрий Дудь') {
+    window.open('https://www.youtube.com/channel/UCMCgOm8GZkHp8zJ6l7_hIuA', '_blank');
+  } else if (currentText === 'поставить новый рекорд в 2048!') {
+    window.open('https://mail.ru/', '_blank');
+  }
 });
 
 // Menu toggler
