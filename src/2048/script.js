@@ -1,11 +1,5 @@
-/* eslint-disable no-plusplus */
-/* eslint-disable no-continue */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable no-alert */
-/* eslint-disable no-use-before-define */
-/* eslint-disable import/extensions */
-import Grid from "./grid";
-import Tile from "./tile";
+import { Grid } from "./grid.js";
+import { Tile } from "./tile.js";
 
 const gameBoard = document.getElementById("game-board");
 
