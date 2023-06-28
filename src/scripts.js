@@ -89,7 +89,7 @@ videoButton.addEventListener('click', () => {
   if (currentText === 'Юрий Дудь') {
     window.open('https://www.youtube.com/channel/UCMCgOm8GZkHp8zJ6l7_hIuA', '_blank');
   } else if (currentText === 'поставить новый рекорд в 2048!') {
-    window.open('https://mail.ru/', '_blank');
+    window.open('http://127.0.0.1:3001/#2048.html', '_blank');
   }
 });
 
