@@ -24,18 +24,17 @@
     "title": "Breathtaking features of Procrastinator",
     "text": "A lot of funny stuff for your joy. Do you need guilty pleasure? Here are lot of them!",
     "card": {
-      "$0-title": "Discuss with Colleagues",
-      "$0-text": "Working online is the same experience as work ing in an office. This will be. achieved with..",
-      "$1-title": "Discuss with Colleagues",
-      "$1-text": "Working online is the same experience as work ing in an office. This will be. achieved with..",
-      "$2-title": "Discuss with Colleagues",
-      "$2-text": "Working online is the same experience as work ing in an office. This will be. achieved with..",
+      "$0-title": "A lot of joy",
+      "$0-text": "Recharge your battery and relax your brain with a collection of fun ideas",
+      "$1-title": "From 1 minute to 1 hour",
+      "$1-text": "Comfortable variant for any amount of time",
+      "$2-title": "Available on any device",
+      "$2-text": "Works perfect on any devices staring with a tiny smartphone to huge gaming laptop",
       "button": "Try now"
     }
   },
   "procrastinator": {
     "title": "Choose your Destiny",
-    "text": "Adipiscing at in tellus integer. Pellentesque massa placerat duis ultricies. Venenatis cras",
     "button": "Next idea",
     "button-additional": "Let&apos;s go"
   }
