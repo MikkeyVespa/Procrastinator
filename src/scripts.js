@@ -38,7 +38,7 @@ const phrases = [
   },
   {
     text: 'поставить новый рекорд в 2048!',
-    image: 'https://code.s3.yandex.net/web-code/procrastinate/9.png'
+    image: './Group 3.png'
   },
   {
     text: 'проверить непрочитанное в Telegram-каналах',
