@@ -104,7 +104,7 @@ menuButton.addEventListener('click', () =>
 // eslint-disable-next-line no-undef
 const translator = new Translator({
   persist: false,
-  languages: ['en', 'ru', 'be'],
+  languages: ['en', 'ru'],
   defaultLanguage: 'en',
   detectLanguage: true,
   filesLocation: '/content'
